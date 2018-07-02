@@ -12,7 +12,7 @@ import com.ibm.watson.developer_cloud.discovery.v1.model.QueryResponse;
 import com.ibm.watson.developer_cloud.discovery.v1.model.QueryResult;
 
 public class ComplexConceptQueryClient {
-		private static final String BASE_URL = "http://lm-maa-22004825:9080/api/discovery/query?";
+		private static final String BASE_URL = "http://localhost:9080/api/discovery/query?";
 		private static int MAX_QUERY_RESULT_COUNT = 30;
 		
 		// HTTP GET request
@@ -52,7 +52,7 @@ public class ComplexConceptQueryClient {
 				}
 				in.close();
 				//print result
-				System.out.println(response.toString());
+//				System.out.println(response.toString());
 				Gson gson = new Gson();
 				queryResponse = gson.fromJson(response.toString(),QueryResponse.class);
 			}catch(Exception e) {

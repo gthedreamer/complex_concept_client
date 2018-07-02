@@ -27,8 +27,8 @@ public class QueryFileProcessor {
 				stringBuffer.append(line+"\n");
 			}
 			fileReader.close();
-			System.out.println("Contents of file:");
-			System.out.println(stringBuffer.toString());
+//			System.out.println("query file:");
+//			System.out.println(stringBuffer.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -50,6 +50,7 @@ public class QueryFileProcessor {
 
 			for(String query : queries) {
 				try {
+					System.out.println("Processing query => "+query);
 					// Hit REST Endpoint
 					QueryResponse response = queryClient.sendGet(query);
 					queryResponses.add(response);
@@ -61,7 +62,7 @@ public class QueryFileProcessor {
 			}
 			
 			List<String> commaSeperatedDocIdsAllQueries = responseParser.getCommaSeperatedDocIds(queryResponses);
-			overallStatus = csvWriter.writeResultsToCSVFile(commaSeperatedDocIdsAllQueries, "ganesh.csv");
+			overallStatus = csvWriter.writeResultsToCSVFile(commaSeperatedDocIdsAllQueries);
 			
 		}catch(Exception e) {
 			System.out.println("Exception.. quit processing queries.."+e.getMessage());
