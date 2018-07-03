@@ -4,7 +4,7 @@ import discovery.processor.QueryFileProcessor;
 import discovery.restclient.FileUploadClient;
 
 /**
- * Hello world!
+ * App
  *
  */
 public class App 
@@ -13,7 +13,7 @@ public class App
     {
     	try {
     		if(args.length != 2 ) {
-    			System.out.println("Invalid command!! \n"+ "Correct format jarfile <absolute path day_one_set file>  <absolute path query file");
+    			System.out.println("Please follow the below format !! \n"+ "java -jar target/complex-concept-client-0.0.1-SNAPSHOT.jar day_one_set.txt  query_file.txt");
     			return;
     		}
     		

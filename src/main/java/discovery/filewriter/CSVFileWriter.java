@@ -16,7 +16,7 @@ public class CSVFileWriter {
 
 			fileWriter = new FileWriter(OUTPUT_CSV_FILE);
 			String outFileAbsPath = new File(OUTPUT_CSV_FILE).getAbsolutePath();
-			System.out.println("Writing query output to "+outFileAbsPath);
+//			System.out.println("Writing query output to "+outFileAbsPath);
 
 			for(String line : docIdsLines) {
 				fileWriter.append(line+"\n");

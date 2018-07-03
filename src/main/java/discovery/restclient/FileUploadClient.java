@@ -24,7 +24,7 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.HttpClientBuilder;
 
 public class FileUploadClient {
-	private static final String UPLOAD_URI = "http://lm-maa-22004825:9080/api/discovery/upload";
+	private static final String UPLOAD_URI = "http://localhost:9080/api/discovery/upload";
     @SuppressWarnings("deprecation")
 	private  String executeRequest(HttpRequestBase requestBase){
         String responseString = "" ;
