@@ -12,8 +12,8 @@ import com.ibm.watson.developer_cloud.discovery.v1.model.QueryResponse;
 import com.ibm.watson.developer_cloud.discovery.v1.model.QueryResult;
 
 public class ComplexConceptQueryClient {
-		private static final String BASE_URL = "http://localhost:9080/api/discovery/query?";
-		private static int MAX_QUERY_RESULT_COUNT = 30;
+		private static final String BASE_URL = "https://compoundconcept-fantastic-emu.eu-gb.mybluemix.net/api/discovery/query?";
+		private static int MAX_QUERY_RESULT_COUNT = 150;
 		
 		// HTTP GET request
 		public QueryResponse sendGet(String queryString) throws Exception {

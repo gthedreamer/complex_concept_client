@@ -22,7 +22,7 @@ public class CSVFileWriter {
 				fileWriter.append(line+"\n");
 			}
 			
-			System.out.println("Query output written to "+outFileAbsPath + " successfully");
+			System.out.println("*********** Query output written to "+outFileAbsPath + " successfully  "+"************************");
 			status = true;
 		}catch(Exception e) {
 			status = false;

@@ -18,7 +18,8 @@ public class App
     		}
     		
     		FileUploadClient uploadClient = new FileUploadClient();
-    		System.out.println(uploadClient.uploadFile(args[0]));
+    		String response = uploadClient.uploadFile(args[0]);
+    		System.out.println("\n\n**************************** Day 1 Set uploaded *****************************"+ response);
     		
 			QueryFileProcessor queryFileProcessor = new QueryFileProcessor();
 			queryFileProcessor.processQueryFile(args[1]);
